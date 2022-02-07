@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+$shadow: linear-gradient(to left, #89253e, #3a6186);
+
+html {
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    color: white;
+  }
+  ::-webkit-scrollbar-track {
+    color: black;
+  }
+}
+
+body {
+  font-family: "Dongle", sans-serif;
+  font-size: 1.5rem;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    135deg,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.light_menu {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 1000;
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    padding-top: 1rem;
+    box-shadow: 0 0 5px white;
+
+    h {
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  .con_nav {
+    position: relative;
+    display: flex;
+    text-align: center;
+    gap: 4rem;
+    margin-right: 7vw;
+    li {
+      a {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: white;
+
+        // &::after {
+        //   content: "";
+        //   width: 10px;
+        //   height: 10px;
+        //   border-radius: 3rem;
+        //   background-color: black;
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 20px;
+        //   z-index: 1;
+        //   opacity: 0;
+        // }
+        &:hover {
+          color: greenyellow;
+          // &::after {
+          //   opacity: 1;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.rule {
+  background-color: white;
+  position: absolute;
+  bottom: 5vh;
+  right: 0;
+  padding: 2rem;
+  z-index: 100;
+  border-radius: 3rem 0 0 3rem;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+  &.active {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  li {
+    list-style: circle;
+    text-transform: capitalize;
+  }
+  .butt_close {
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.con_ran {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  .random_pane {
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+
+    .pan {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      text-align: center;
+      border-radius: 3rem;
+      overflow: hidden;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s linear;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .title_ran {
+        display: inline-block;
+        width: inherit;
+        background-color: goldenrod;
+        text-transform: capitalize;
+        color: black;
+        font-weight: 700;
+      }
+
+      .number {
+        margin-top: 1.7rem;
+        font-size: 5rem;
+        color: white;
+      }
+    }
+  }
+}
+.result {
+  text-align: center;
+  width: 50vw;
+  border-radius: 3rem;
+  padding: 1rem;
+  margin-top: 10vh;
+  margin-left: 25vw;
+  background: #200122; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6f0000,
+    #200122
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6f0000,
+    #200122
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: 0 0 10px white;
+
+  .title_result {
+    font-size: 2rem;
+    color: white;
+    font-weight: 900;
+  }
+  p {
+    display: inline-block;
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: greenyellow;
+    font-weight: 900;
+  }
+}
+
+.start {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 42vh;
+  right: 10vw;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  transition: transform 0.4s linear;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: aqua;
+    i {
+      color: #c31432;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 100;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-weight: 600;
+  }
+  i {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.6rem;
+    font-size: 70px;
+    color: greenyellow;
+  }
+}
+
+.input_number_player {
+  text-align: center;
+  margin-top: 3rem;
+
+  h {
+    text-transform: capitalize;
+    font-size: 2rem;
+    border-radius: 3rem;
+    padding: 1rem;
+    background: #3a6186; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #89253e,
+      #3a6186
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #89253e,
+      #3a6186
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0 0 10px white;
+  }
+  .input_number {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+
+    input {
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      border-radius: 1rem;
+      border: 2px solid rgb(255, 255, 255);
+      background: transparent;
+      color: white;
+      style
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+}
+
+.notification{
+  width: 600px;
+  height: 550px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+  text-align: center;
+  border-radius: 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  z-index: 100000;
+
+    &.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+  .butt_close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+
+    &:hover{
+      color: greenyellow;
+    }
+  }
+  p{
+    font-size: 2rem;
+  }
+  #num_player{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    height: 200px;
+    padding: 2rem;
+    color: rgb(9, 255, 0);
+    font-weight: 900;
+  }
+  #notifi{
+    color: white;
+    padding: 2rem;
+    font-weight: 900;
+  }
+}

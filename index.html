@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!--=============== FAVICON ===============-->
+    <link rel="ICON" href="random_img.ico" type="image/gif">
+
+    <!--=============== ICON ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--===============  ===============-->
+
+    <title>App Random</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h class="title">Random TP</h>
+      </div>
+      <nav class="con_nav">
+        <li><a href="#home">home</a></li>
+        <li><a href="#contaxt">contaxt</a></li>
+        <li><a href="#blog">blogs</a></li>
+        <li><a id="rule" href="#rules">rules</a></li>
+      </nav>
+
+      <div class="light_menu">
+        <i class="bx bxs-moon"></i>
+        <i class="bx bx-menu"></i>
+      </div>
+    </header>
+    <section class="rule">
+      <i class='bx bx-window-close butt_close'></i>
+      <li>ban chon ngau nhien lan luot 3 so number 1, number 2 and numner 3</li>
+      <li>chon so tu 0 den 99</li>
+      <li>voi moi so ban chon khi random ra chenh lech voi so may man 5 don vi </li>
+      <li>thi ban se la nguoi chien thang</li>
+    </section>
+    <section class="con_ran">
+
+      <section class="random_pane_1 random_pane">
+        <div class="pan">
+          <h class="title_ran">number 1</h>
+          <div class="number">
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section class="random_pane_2 random_pane">
+        <div class="pan">
+          <h class="title_ran">number 2</h>
+          <div class="number">
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section class="random_pane_3 random_pane">
+        <div class="pan">
+          <h class="title_ran">number 3</h>
+          <div class="number">
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="result">
+      <h class="title_result">Day so may man la:</h>
+      <p></p>
+    </section>
+
+    <section class="start">
+      <p>play</p>
+      <i class='bx bx-play'></i>
+    </section>
+
+    <section class="input_number_player">
+      <h class="title_input_num">nhap 3 so cua ban: </h>
+      <form class="input_number">
+        <input type="number" id="num_1" placeholder="number 1" >
+        <input type="number" id="num_2" placeholder="number 2" >
+        <input type="number" id="num_3" placeholder="number 3" > 
+      </form>
+    </section>
+
+    <section class="notification">
+      <i class='bx bx-window-close butt_close'></i>
+      <p id="num_player"></p>
+      <p id="notifi"></p>
+    </section>
+    <script src="controller.js"></script>
+  </body>
+</html>
