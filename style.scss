@@ -11,13 +11,13 @@ $shadow: linear-gradient(to left, #89253e, #3a6186);
 
 html {
   ::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 5px;
   }
   ::-webkit-scrollbar-thumb {
-    color: white;
+    background-color: rgb(255, 255, 255);
   }
   ::-webkit-scrollbar-track {
-    color: black;
+    background-color: rgb(255, 2, 2);
   }
 }
 
@@ -69,6 +69,13 @@ a {
     padding-top: 1rem;
     box-shadow: 0 0 5px white;
 
+    animation-name: efect_logo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+    transition: all 0.2s linear;
     h {
       color: black;
       font-size: 1.2rem;
@@ -159,6 +166,12 @@ a {
       overflow: hidden;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       transition: transform 0.2s linear;
+
+      animation-name: border_num;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
 
       &:hover {
         transform: translateY(-5px);
@@ -294,53 +307,106 @@ a {
       border: 2px solid rgb(255, 255, 255);
       background: transparent;
       color: white;
-      style
-      &::placeholder {
+      style &::placeholder {
         color: white;
       }
     }
   }
 }
 
-.notification{
-  width: 600px;
+.notification {
+  width: 45vw;
   height: 550px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 20vh;
-  left: 30vw;
+  left: 27.5vw;
   text-align: center;
   border-radius: 3rem;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   z-index: 100000;
 
-    &.active{
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-    }
-  .butt_close{
+  &.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .butt_close {
     position: absolute;
     top: 2rem;
     right: 2rem;
     color: white;
 
-    &:hover{
+    &:hover {
       color: greenyellow;
     }
   }
-  p{
+  p {
     font-size: 2rem;
   }
-  #num_player{
+  #num_player {
     border-bottom: 2px solid rgb(255, 255, 255);
     height: 200px;
     padding: 2rem;
     color: rgb(9, 255, 0);
     font-weight: 900;
   }
-  #notifi{
+  #notifi {
     color: white;
     padding: 2rem;
     font-weight: 900;
+  }
+}
+
+@keyframes efect_logo {
+  0% {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+
+    h {
+      color: black;
+    }
+  }
+  25% {
+    background-color: rgb(255, 0, 0);
+    box-shadow: 0 0 5px rgb(255, 0, 0);
+  }
+  50% {
+    background-color: rgb(4, 255, 45);
+    box-shadow: 0 0 5px rgb(0, 255, 34);
+  }
+  75% {
+    background-color: rgb(55, 0, 255);
+    box-shadow: 0 0 5px rgb(16, 0, 233);
+  }
+  100% {
+    background-color: rgb(255, 251, 2);
+    box-shadow: 0 0 5px rgb(238, 255, 2);
+  }
+}
+
+@keyframes border_num{
+  0%{
+    border: 2px solid white;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+
+  }
+  25%{
+    border: 2px solid rgb(217, 255, 0);
+    box-shadow: 5px 5px 5px rgba(208, 255, 0, 0.5);
+
+  }
+  50%{
+    border: 2px solid rgb(0, 255, 21);
+    box-shadow: 5px 5px 5px rgba(43, 255, 0, 0.5);
+
+  }
+  75%{
+    border: 2px solid rgb(255, 3, 221);
+    box-shadow: 5px 5px 5px rgba(255, 0, 221, 0.5);
+
+  }
+  100%{
+    border: 2px solid rgb(0, 17, 255);
+    box-shadow: 5px 5px 5px rgba(17, 0, 255, 0.5);
+
   }
 }

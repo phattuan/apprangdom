@@ -8,15 +8,15 @@
 }
 
 html ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 5px;
 }
 
 html ::-webkit-scrollbar-thumb {
-  color: white;
+  background-color: white;
 }
 
 html ::-webkit-scrollbar-track {
-  color: black;
+  background-color: #ff0202;
 }
 
 body {
@@ -66,6 +66,18 @@ a {
   padding-top: 1rem;
   -webkit-box-shadow: 0 0 5px white;
           box-shadow: 0 0 5px white;
+  -webkit-animation-name: efect_logo;
+          animation-name: efect_logo;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .header .logo h {
@@ -164,6 +176,16 @@ a {
   transition: -webkit-transform 0.2s linear;
   transition: transform 0.2s linear;
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  -webkit-animation-name: border_num;
+          animation-name: border_num;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .con_ran .random_pane .pan:hover {
@@ -310,33 +332,29 @@ a {
   color: white;
 }
 
-style
-.input_number_player .input_number input::-webkit-input-placeholder {
+style .input_number_player .input_number input::-webkit-input-placeholder {
   color: white;
 }
 
-style
-.input_number_player .input_number input:-ms-input-placeholder {
+style .input_number_player .input_number input:-ms-input-placeholder {
   color: white;
 }
 
-style
-.input_number_player .input_number input::-ms-input-placeholder {
+style .input_number_player .input_number input::-ms-input-placeholder {
   color: white;
 }
 
-style
-.input_number_player .input_number input::placeholder {
+style .input_number_player .input_number input::placeholder {
   color: white;
 }
 
 .notification {
-  width: 600px;
+  width: 45vw;
   height: 550px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 20vh;
-  left: 30vw;
+  left: 27.5vw;
   text-align: center;
   border-radius: 3rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -376,5 +394,123 @@ style
   color: white;
   padding: 2rem;
   font-weight: 900;
+}
+
+@-webkit-keyframes efect_logo {
+  0% {
+    background-color: white;
+    -webkit-box-shadow: 0 0 5px white;
+            box-shadow: 0 0 5px white;
+    h {
+      color: black;
+    }
+  }
+  25% {
+    background-color: red;
+    -webkit-box-shadow: 0 0 5px red;
+            box-shadow: 0 0 5px red;
+  }
+  50% {
+    background-color: #04ff2d;
+    -webkit-box-shadow: 0 0 5px #00ff22;
+            box-shadow: 0 0 5px #00ff22;
+  }
+  75% {
+    background-color: #3700ff;
+    -webkit-box-shadow: 0 0 5px #1000e9;
+            box-shadow: 0 0 5px #1000e9;
+  }
+  100% {
+    background-color: #fffb02;
+    -webkit-box-shadow: 0 0 5px #eeff02;
+            box-shadow: 0 0 5px #eeff02;
+  }
+}
+
+@keyframes efect_logo {
+  0% {
+    background-color: white;
+    -webkit-box-shadow: 0 0 5px white;
+            box-shadow: 0 0 5px white;
+    h {
+      color: black;
+    }
+  }
+  25% {
+    background-color: red;
+    -webkit-box-shadow: 0 0 5px red;
+            box-shadow: 0 0 5px red;
+  }
+  50% {
+    background-color: #04ff2d;
+    -webkit-box-shadow: 0 0 5px #00ff22;
+            box-shadow: 0 0 5px #00ff22;
+  }
+  75% {
+    background-color: #3700ff;
+    -webkit-box-shadow: 0 0 5px #1000e9;
+            box-shadow: 0 0 5px #1000e9;
+  }
+  100% {
+    background-color: #fffb02;
+    -webkit-box-shadow: 0 0 5px #eeff02;
+            box-shadow: 0 0 5px #eeff02;
+  }
+}
+
+@-webkit-keyframes border_num {
+  0% {
+    border: 2px solid white;
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+            box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    border: 2px solid #d9ff00;
+    -webkit-box-shadow: 5px 5px 5px rgba(208, 255, 0, 0.5);
+            box-shadow: 5px 5px 5px rgba(208, 255, 0, 0.5);
+  }
+  50% {
+    border: 2px solid #00ff15;
+    -webkit-box-shadow: 5px 5px 5px rgba(43, 255, 0, 0.5);
+            box-shadow: 5px 5px 5px rgba(43, 255, 0, 0.5);
+  }
+  75% {
+    border: 2px solid #ff03dd;
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 0, 221, 0.5);
+            box-shadow: 5px 5px 5px rgba(255, 0, 221, 0.5);
+  }
+  100% {
+    border: 2px solid #0011ff;
+    -webkit-box-shadow: 5px 5px 5px rgba(17, 0, 255, 0.5);
+            box-shadow: 5px 5px 5px rgba(17, 0, 255, 0.5);
+  }
+}
+
+@keyframes border_num {
+  0% {
+    border: 2px solid white;
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+            box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    border: 2px solid #d9ff00;
+    -webkit-box-shadow: 5px 5px 5px rgba(208, 255, 0, 0.5);
+            box-shadow: 5px 5px 5px rgba(208, 255, 0, 0.5);
+  }
+  50% {
+    border: 2px solid #00ff15;
+    -webkit-box-shadow: 5px 5px 5px rgba(43, 255, 0, 0.5);
+            box-shadow: 5px 5px 5px rgba(43, 255, 0, 0.5);
+  }
+  75% {
+    border: 2px solid #ff03dd;
+    -webkit-box-shadow: 5px 5px 5px rgba(255, 0, 221, 0.5);
+            box-shadow: 5px 5px 5px rgba(255, 0, 221, 0.5);
+  }
+  100% {
+    border: 2px solid #0011ff;
+    -webkit-box-shadow: 5px 5px 5px rgba(17, 0, 255, 0.5);
+            box-shadow: 5px 5px 5px rgba(17, 0, 255, 0.5);
+  }
 }
 /*# sourceMappingURL=style.css.map */
